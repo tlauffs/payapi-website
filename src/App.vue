@@ -17,6 +17,7 @@ function closeNav(){
   <header>
     <nav class="nav-container">
         <router-link to="/">
+            <img src="/src/assets/shared/desktop/logo.svg" class="nav-logo" alt="">
         </router-link>
         <div class="desktop-nav">
             <router-link to="/pricing" class="nav-element"><b>Pricing</b></router-link>
