@@ -1,18 +1,24 @@
 <script setup lang="ts">
 </script>
 <template>
-  <div>
-    <!--
-    <div class="circle top"></div>
-    -->
+  <div class="overflow-wrapper top-wrapper">
+    <div class="circle top-circle"></div>
   </div>
   <div class="grid-container section">
     <div class="grid-item header-text">
       <h1>Start building with our APIs for absolutely free.</h1>
-      <div class="input-wrapper demo-input">
-        <input class="input" placeholder="Enter email address " type="text" />
-        <button class="btn-primary btn-demo">Schedule a Demo</button>
-      </div>
+      <form>
+        <div class="input-wrapper demo-input">
+          <input
+            class="input"
+            placeholder="Enter email address "
+            type="email"
+          />
+          <button type="submit" class="btn-primary btn-demo">
+            Schedule a Demo
+          </button>
+        </div>
+      </form>
       <p class="indent">
         Have any questions?
         <router-link to="/contact" class="btn-link"
@@ -28,10 +34,14 @@
       />
     </div>
   </div>
+  <div class="overflow-wrapper">
+    <div class="circle dark-circle"></div>
+  </div>
   <div class="dark-section">
     <div class="grid-container">
       <div class="max-text-width">
         <h2 class="white-text">Who we work with</h2>
+
         <p class="white-text opaque">
           Today, millions of people around the world have successfully connected
           their accounts to apps they love using our API. We provide developers
@@ -76,6 +86,9 @@
         </p>
       </div>
     </div>
+  </div>
+  <div class="overflow-wrapper">
+    <div class="circle right-circle"></div>
   </div>
   <div class="grid-container section pt-5">
     <div class="grid-item">
@@ -127,13 +140,6 @@
 </template>
 
 <style scoped>
-.top {
-  position: absolute;
-  overflow: hidden;
-  top: -12rem;
-  right: -12rem;
-}
-
 /* layout styles */
 
 .grid-container {
@@ -186,8 +192,7 @@
   margin-right: 1rem;
 }
 .ui-img {
-  width: min(80vw, 35rem);
-
+  width: min(80vw, 42rem);
   margin-right: 1rem;
 }
 .grid-container-3-col {
@@ -229,11 +234,6 @@
   .demo-input {
     margin-left: auto;
     margin-right: auto;
-  }
-  .top {
-    top: calc(-100vw - 20rem);
-    left: 50%;
-    transform: translate(-50%, 0);
   }
   .logo-grid-wrapper {
     grid-row: 1;
