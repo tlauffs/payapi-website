@@ -13,16 +13,113 @@ function closeNav() {
 </script>
 
 <template>
-  <header>
-    <nav class="nav-container">
-      <router-link to="/">
+  <div>
+    <header>
+      <nav class="nav-container">
+        <router-link to="/">
+          <img
+            src="/src/assets/shared/desktop/logo.svg"
+            class="nav-logo"
+            alt=""
+          />
+        </router-link>
+        <div class="desktop-nav">
+          <router-link to="/pricing" class="nav-element"
+            ><b>Pricing</b></router-link
+          >
+          <router-link to="/about" class="nav-element"
+            ><b>About</b></router-link
+          >
+          <router-link to="/contact" class="nav-element"
+            ><b>Contact</b></router-link
+          >
+          <button class="btn-primary nav-button"><b>Schedule a Demo</b></button>
+        </div>
+        <div class="mobile-nav">
+          <img
+            src="/src/assets/shared/mobile/menu.svg"
+            @click="openNav()"
+            class="hamburger-btn"
+            alt=""
+          />
+        </div>
+      </nav>
+    </header>
+    <router-view></router-view>
+    <div class="footer">
+      <div class="section flex-container pt-5">
+        <div class="mb-3">
+          <h2 class="center">Ready to start?</h2>
+        </div>
+        <form>
+          <div class="input-wrapper mb-3">
+            <input
+              class="input"
+              placeholder="Enter email address"
+              type="email"
+            />
+            <button type="submit" class="btn-primary btn-demo">
+              Schedule a Demo
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="flex-footer mt-3">
+        <div class="overflow-wrapper">
+          <div class="circle footer-circle"></div>
+        </div>
+        <div class="nav-footer-ele">
+          <router-link to="/">
+            <img
+              src="/src/assets/shared/desktop/logo.svg"
+              class="nav-logo logo-white"
+              alt=""
+            />
+          </router-link>
+        </div>
+        <router-link
+          to="/pricing"
+          class="nav-element-light white-text nav-footer-ele"
+          ><b>Pricing</b></router-link
+        >
+        <router-link
+          to="/about"
+          class="nav-element-light white-text nav-footer-ele"
+          ><b>About</b></router-link
+        >
+        <router-link
+          to="/contact"
+          class="nav-element-light white-text nav-footer-ele"
+          ><b>Contact</b></router-link
+        >
+        <div class="socials nav-footer-ele">
+          <img
+            src="/src/assets/shared/desktop/facebook.svg"
+            alt=""
+            class="mlr social-btn"
+          />
+          <img
+            src="/src/assets/shared/desktop/twitter.svg"
+            alt=""
+            class="mlr social-btn"
+          />
+          <img
+            src="/src/assets/shared/desktop/linkedin.svg"
+            alt=""
+            class="mlr social-btn"
+          />
+        </div>
+      </div>
+    </div>
+    <div ref="mobile_menu" class="mobile-menu">
+      <div class="mobile-menu-nav">
         <img
-          src="/src/assets/shared/desktop/logo.svg"
-          class="nav-logo"
+          src="/src/assets/shared/mobile/close.svg"
+          @click="closeNav()"
+          class="close-btn"
           alt=""
         />
-      </router-link>
-      <div class="desktop-nav">
+        <div class="divider"></div>
         <router-link to="/pricing" class="nav-element"
           ><b>Pricing</b></router-link
         >
@@ -30,101 +127,12 @@ function closeNav() {
         <router-link to="/contact" class="nav-element"
           ><b>Contact</b></router-link
         >
-        <button class="btn-primary nav-button"><b>Schedule a Demo</b></button>
-      </div>
-      <div class="mobile-nav">
-        <img
-          src="/src/assets/shared/mobile/menu.svg"
-          @click="openNav()"
-          class="hamburger-btn"
-          alt=""
-        />
-      </div>
-    </nav>
-  </header>
-  <router-view></router-view>
-  <div class="footer">
-    <div class="section flex-container pt-5">
-      <div class="mb-3">
-        <h2 class="center">Ready to start?</h2>
-      </div>
-      <form>
-      <div class="input-wrapper mb-3">
-        <input class="input" placeholder="Enter email address" type="email" />
-        <button type="submit" class="btn-primary btn-demo">Schedule a Demo</button>
-      </div>
-      </form>
-    </div>
-    <div class="flex-footer mt-3">
-      <div class="overflow-wrapper">
-        <div class="circle footer-circle"></div>
-      </div>
-      <div class="nav-footer-ele">
-        <router-link to="/">
-          <img
-            src="/src/assets/shared/desktop/logo.svg"
-            class="nav-logo logo-white"
-            alt=""
-          />
-        </router-link>
-      </div>
-      <router-link
-        to="/pricing"
-        class="nav-element-light white-text nav-footer-ele"
-        ><b>Pricing</b></router-link
-      >
-      <router-link
-        to="/about"
-        class="nav-element-light white-text nav-footer-ele"
-        ><b>About</b></router-link
-      >
-      <router-link
-        to="/contact"
-        class="nav-element-light white-text nav-footer-ele"
-        ><b>Contact</b></router-link
-      >
-      <div class="socials nav-footer-ele">
-        <img
-          src="/src/assets/shared/desktop/facebook.svg"
-          alt=""
-          class="mlr social-btn"
-        />
-        <img
-          src="/src/assets/shared/desktop/twitter.svg"
-          alt=""
-          class="mlr social-btn"
-        />
-        <img
-          src="/src/assets/shared/desktop/linkedin.svg"
-          alt=""
-          class="mlr social-btn"
-        />
+        <button class="btn-primary btn-nav-mobile">
+          <b>Schedule a Demo</b>
+        </button>
       </div>
     </div>
   </div>
-  <div ref="mobile_menu" class="mobile-menu">
-          <div class="mobile-menu-nav">
-            <img
-              src="/src/assets/shared/mobile/close.svg"
-              @click="closeNav()"
-              class="close-btn"
-              alt=""
-            />
-            <div class="divider"></div>
-            <router-link to="/pricing" class="nav-element"
-              ><b>Pricing</b></router-link
-            >
-            <router-link to="/about" class="nav-element"
-              ><b>About</b></router-link
-            >
-            <router-link to="/contact" class="nav-element"
-              ><b>Contact</b></router-link
-            >
-            <button class="btn-primary btn-nav-mobile">
-              <b>Schedule a Demo</b>
-            </button>
-          </div>
-        </div>
 </template>
 
 <style scoped>
@@ -167,6 +175,7 @@ function closeNav() {
 @media (max-width: 64rem) {
   .flex-container {
     justify-content: center;
+    flex-direction: column;
   }
 }
 @media (max-width: 48rem) {

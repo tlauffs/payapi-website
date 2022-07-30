@@ -1,140 +1,153 @@
 <script setup lang="ts">
 </script>
 <template>
-  <div class="overflow-wrapper top-wrapper">
-    <div class="circle top-circle"></div>
-  </div>
-  <div class="grid-container section">
-    <div class="grid-item header-text">
-      <h1>Start building with our APIs for absolutely free.</h1>
-      <form>
-        <div class="input-wrapper demo-input">
-          <input
-            class="input"
-            placeholder="Enter email address "
-            type="email"
-          />
-          <button type="submit" class="btn-primary btn-demo">
-            Schedule a Demo
-          </button>
-        </div>
-      </form>
-      <p class="indent">
-        Have any questions?
-        <router-link to="/contact" class="btn-link"
-          ><b>Contact Us</b></router-link
-        >
-      </p>
+  <div>
+    <div class="overflow-wrapper top-wrapper">
+      <div class="circle top-circle"></div>
     </div>
-    <div class="grid-item phone-item">
-      <img
-        src="/src/assets/home/desktop/illustration-phone-mockup.svg"
-        class="phone-img"
-        alt=""
-      />
+    <div class="grid-container section">
+      <div class="grid-item header-text">
+        <h1>Start building with our APIs for absolutely free.</h1>
+        <form>
+          <div class="input-wrapper demo-input">
+            <input
+              class="input"
+              placeholder="Enter email address "
+              type="email"
+            />
+            <button type="submit" class="btn-primary btn-demo">
+              Schedule a Demo
+            </button>
+          </div>
+        </form>
+        <p class="indent">
+          Have any questions?
+          <router-link to="/contact" class="btn-link"
+            ><b>Contact Us</b></router-link
+          >
+        </p>
+      </div>
+      <div class="grid-item phone-item">
+        <img
+          src="/src/assets/home/desktop/illustration-phone-mockup.svg"
+          class="phone-img"
+          alt=""
+        />
+      </div>
     </div>
-  </div>
-  <div class="overflow-wrapper">
-    <div class="circle dark-circle"></div>
-  </div>
-  <div class="dark-section">
-    <div class="grid-container">
-      <div class="max-text-width">
-        <h2 class="white-text">Who we work with</h2>
+    <div class="overflow-wrapper">
+      <div class="circle dark-circle"></div>
+    </div>
+    <div class="dark-section">
+      <div class="grid-container">
+        <div class="max-text-width">
+          <h2 class="white-text">Who we work with</h2>
 
-        <p class="white-text opaque">
-          Today, millions of people around the world have successfully connected
-          their accounts to apps they love using our API. We provide developers
-          with the tools they need to create easy and accessible experiences for
-          their users.
-        </p>
-        <div class="mt-3 mb">
-          <router-link to="/about" class="btn-sec-light">About Us</router-link>
+          <p class="white-text opaque">
+            Today, millions of people around the world have successfully
+            connected their accounts to apps they love using our API. We provide
+            developers with the tools they need to create easy and accessible
+            experiences for their users.
+          </p>
+          <div class="mt-3 mb">
+            <router-link to="/about" class="btn-sec-light"
+              >About Us</router-link
+            >
+          </div>
+        </div>
+        <div class="logo-grid-wrapper">
+          <div class="logo-grid">
+            <div><img src="/src/assets/shared/desktop/tesla.svg" alt="" /></div>
+            <div>
+              <img src="/src/assets/shared/desktop/microsoft.svg" alt="" />
+            </div>
+            <div>
+              <img
+                src="/src/assets/shared/desktop/hewlett-packard.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img src="/src/assets/shared/desktop/oracle.svg" alt="" />
+            </div>
+            <div>
+              <img src="/src/assets/shared/desktop/google.svg" alt="" />
+            </div>
+            <div>
+              <img src="/src/assets/shared/desktop/nvidia.svg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
-      <div class="logo-grid-wrapper">
-        <div class="logo-grid">
-          <div><img src="/src/assets/shared/desktop/tesla.svg" alt="" /></div>
-          <div>
-            <img src="/src/assets/shared/desktop/microsoft.svg" alt="" />
-          </div>
-          <div>
-            <img src="/src/assets/shared/desktop/hewlett-packard.svg" alt="" />
-          </div>
-          <div><img src="/src/assets/shared/desktop/oracle.svg" alt="" /></div>
-          <div><img src="/src/assets/shared/desktop/google.svg" alt="" /></div>
-          <div><img src="/src/assets/shared/desktop/nvidia.svg" alt="" /></div>
+    </div>
+    <div class="grid-container section pt-5">
+      <div>
+        <img
+          src="/src/assets/home/desktop/illustration-easy-to-implement-cropped.svg"
+          class="implement-img"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <div class="implement-text">
+          <h2>Easy to implement</h2>
+          <p>
+            Our API comes with just a few lines of code. You’ll be up and
+            running in no time. We built our documentation page to integrate
+            payments functionality with ease.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-  <div class="grid-container section pt-5">
-    <div>
-      <img
-        src="/src/assets/home/desktop/illustration-easy-to-implement-cropped.svg"
-        class="implement-img"
-        alt=""
-      />
+    <div class="overflow-wrapper">
+      <div class="circle right-circle"></div>
     </div>
-    <div class="grid-item">
-      <div class="implement-text">
-        <h2>Easy to implement</h2>
-        <p>
-          Our API comes with just a few lines of code. You’ll be up and running
-          in no time. We built our documentation page to integrate payments
-          functionality with ease.
-        </p>
+    <div class="grid-container section pt-5">
+      <div class="grid-item">
+        <div class="implement-text mr-2">
+          <h2>Simple UI & UX</h2>
+          <p>
+            Our pre-built form is easy to integrate in your app or website’s
+            checkout flow and designed to optimize conversion.
+          </p>
+        </div>
+      </div>
+      <div class="phone-item">
+        <img
+          src="/src/assets/home/desktop/illustration-simple-ui.svg"
+          class="ui-img"
+          alt=""
+        />
       </div>
     </div>
-  </div>
-  <div class="overflow-wrapper">
-    <div class="circle right-circle"></div>
-  </div>
-  <div class="grid-container section pt-5">
-    <div class="grid-item">
-      <div class="implement-text mr-2">
-        <h2>Simple UI & UX</h2>
+    <div class="grid-container-3-col section pt-5">
+      <div>
+        <img src="/src/assets/home/desktop/icon-personal-finances.svg" />
+        <p class="p-header">Personal Finances</p>
         <p>
-          Our pre-built form is easy to integrate in your app or website’s
-          checkout flow and designed to optimize conversion.
+          Consolidate financial data from multiple sources and categorize
+          transactions up to 2 years of history. Analyze reports to reconcile
+          activities in your account.
         </p>
       </div>
-    </div>
-    <div class="phone-item">
-      <img
-        src="/src/assets/home/desktop/illustration-simple-ui.svg"
-        class="ui-img"
-        alt=""
-      />
-    </div>
-  </div>
-  <div class="grid-container-3-col section pt-5">
-    <div>
-      <img src="/src/assets/home/desktop/icon-personal-finances.svg" />
-      <p class="p-header">Personal Finances</p>
-      <p>
-        Consolidate financial data from multiple sources and categorize
-        transactions up to 2 years of history. Analyze reports to reconcile
-        activities in your account.
-      </p>
-    </div>
-    <div>
-      <img src="/src/assets/home/desktop/icon-banking-and-coverage.svg" />
-      <p class="p-header">Banking & Coverage</p>
-      <p>
-        With our platform, you can speed up account onboarding and support
-        ongoing payments for checking, savings, credit card, and brokerage
-        accounts.
-      </p>
-    </div>
-    <div>
-      <img src="/src/assets/home/desktop/icon-consumer-payments.svg" />
-      <p class="p-header">Consumer Payments</p>
-      <p>
-        It’s easier to set up secure bank payments with us through a flow
-        designed with the user experience in mind. Customers could instantly
-        authenticate their account.
-      </p>
+      <div>
+        <img src="/src/assets/home/desktop/icon-banking-and-coverage.svg" />
+        <p class="p-header">Banking & Coverage</p>
+        <p>
+          With our platform, you can speed up account onboarding and support
+          ongoing payments for checking, savings, credit card, and brokerage
+          accounts.
+        </p>
+      </div>
+      <div>
+        <img src="/src/assets/home/desktop/icon-consumer-payments.svg" />
+        <p class="p-header">Consumer Payments</p>
+        <p>
+          It’s easier to set up secure bank payments with us through a flow
+          designed with the user experience in mind. Customers could instantly
+          authenticate their account.
+        </p>
+      </div>
     </div>
   </div>
 </template>
