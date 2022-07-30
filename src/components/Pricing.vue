@@ -11,10 +11,14 @@
       <div class="pricing-grid">
         <div class="flex-md-center">
           <h3 class="mt">Free Plan</h3>
+        </div>
+        <div>
           <p class="text-md-center">
             Build and test using our core set of products with up to 100 API
             requests
           </p>
+        </div>
+        <div class="flex-md-center">
           <h2 class="mb">$0.00</h2>
           <div class="divider-light"></div>
           <div class="pricing-list">
@@ -35,10 +39,14 @@
         </div>
         <div class="flex-md-center">
           <h3 class="mt">Basic Plan</h3>
+        </div>
+        <div>
           <p class="text-md-center">
             Launch your project with unlimited requests and no contractual
             minimums
           </p>
+        </div>
+        <div class="flex-md-center">
           <h2 class="mb">$249.00</h2>
           <div class="divider-light"></div>
           <div class="pricing-list">
@@ -59,10 +67,14 @@
         </div>
         <div class="flex-md-center">
           <h3 class="mt">Premium Plan</h3>
+        </div>
+        <div>
           <p class="text-md-center">
             Get tailored solutions, volume pricing, and dedicated support for
             your team
           </p>
+        </div>
+        <div class="flex-md-center">
           <h2 class="mb">$499.00</h2>
           <div class="divider-light"></div>
           <div class="pricing-list">
@@ -87,7 +99,8 @@
 <style scoped>
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-auto-flow: column;
   gap: 1rem;
   margin: 2rem 0;
 }
@@ -98,7 +111,7 @@
 
 @media (max-width: 48rem) {
   .pricing-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9, auto);
   }
 }
 
@@ -108,8 +121,7 @@ h3 {
 
 ul {
   margin: 0;
-  list-style-position: inside;
-  padding-left: 0rem;
+  padding-left: 1.5rem;
 }
 
 li {
@@ -119,6 +131,7 @@ li {
 ul.no-check > li {
   opacity: 0.5;
 }
+
 ul.check {
   list-style-image: url("../assets/shared/desktop/icon-check.svg");
 }
