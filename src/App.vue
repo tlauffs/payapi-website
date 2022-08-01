@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const mobile_menu = ref("");
+const mobile_menu = ref();
 const email = ref("");
 const emailError = ref(false);
 
@@ -26,6 +26,7 @@ function onSubmitSchedule() {
 }
 
 function scheduleClick() {
+  mobile_menu.value.style.right = "-80%";
   window.scrollTo(0, document.body.scrollHeight);
 }
 </script>
@@ -159,7 +160,7 @@ function scheduleClick() {
         <router-link to="/contact" class="nav-element"
           ><b>Contact</b></router-link
         >
-        <button class="btn-primary btn-nav-mobile">
+        <button class="btn-primary btn-nav-mobile" @click="scheduleClick()">
           <b>Schedule a Demo</b>
         </button>
       </div>
