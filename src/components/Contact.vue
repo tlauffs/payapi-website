@@ -198,6 +198,7 @@ function onSubmitContact() {
   border: none;
   border-bottom: 1px solid var(--light-blue);
   padding: 1rem 0rem; 
+  text-indent: 1rem;
   opacity: 1;
   margin-top: 1rem;
 }
