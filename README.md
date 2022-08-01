@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./pay-website/src/assets/Screenshot.png)
+![Screenshot](./pay-website/src/assets/Screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://payapi-frontendmenter.netlify.app/)
+- Live Site URL: [Live Site](https://payapi-frontendmenter.netlify.app/)
 
 ## My process
 
