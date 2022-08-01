@@ -35,7 +35,7 @@ function scheduleClick() {
   <div>
     <header>
       <nav class="nav-container">
-        <router-link to="/">
+        <router-link to="/" aria-label="home-page">
           <img
             src="/src/assets/shared/desktop/logo.svg"
             class="nav-logo"
@@ -102,7 +102,7 @@ function scheduleClick() {
           <div class="circle footer-circle"></div>
         </div>
         <div class="nav-footer-ele">
-          <router-link to="/">
+          <router-link to="/" aria-label="home-page">
             <img
               src="/src/assets/shared/desktop/logo.svg"
               class="nav-logo logo-white"

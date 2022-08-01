@@ -148,7 +148,7 @@ function onSubmitSchedule() {
     </div>
     <div class="grid-container-3-col section pt-5">
       <div>
-        <img src="/src/assets/home/desktop/icon-personal-finances.svg" />
+        <img src="/src/assets/home/desktop/icon-personal-finances.svg" alt=""/>
         <p class="p-header">Personal Finances</p>
         <p>
           Consolidate financial data from multiple sources and categorize
@@ -157,7 +157,7 @@ function onSubmitSchedule() {
         </p>
       </div>
       <div>
-        <img src="/src/assets/home/desktop/icon-banking-and-coverage.svg" />
+        <img src="/src/assets/home/desktop/icon-banking-and-coverage.svg" alt=""/>
         <p class="p-header">Banking & Coverage</p>
         <p>
           With our platform, you can speed up account onboarding and support
@@ -166,7 +166,7 @@ function onSubmitSchedule() {
         </p>
       </div>
       <div>
-        <img src="/src/assets/home/desktop/icon-consumer-payments.svg" />
+        <img src="/src/assets/home/desktop/icon-consumer-payments.svg" alt=""/>
         <p class="p-header">Consumer Payments</p>
         <p>
           It’s easier to set up secure bank payments with us through a flow
@@ -196,7 +196,7 @@ function onSubmitSchedule() {
 }
 .phone-img {
   margin-left: clamp(0px, 15%, 120px);
-  max-width: clamp(0rem, 50rem, 100%);
+  max-width: clamp(0rem, 31rem, 100%);
 }
 .header-text {
   margin-bottom: 5rem;
