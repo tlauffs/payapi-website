@@ -196,7 +196,7 @@ function onSubmitSchedule() {
 }
 .phone-img {
   margin-left: clamp(0px, 15%, 120px);
-  max-width: clamp(0rem, 31rem, 100%);
+  max-width: clamp(0rem, 25rem, 100%);
 }
 .header-text {
   margin-bottom: 5rem;
