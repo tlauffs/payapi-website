@@ -44,7 +44,7 @@ function onSubmitContact() {
 </script>
 
 <template>
-  <div class="mt-3">
+  <div class="mt-2">
     <div class="overflow-wrapper top-wrapper">
       <div class="circle top-sec-circle"></div>
     </div>
