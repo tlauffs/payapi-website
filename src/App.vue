@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const mobile_menu = ref(null);
+const mobile_menu = ref("");
+const email = ref("");
+const emailError = ref(false);
 
 function openNav() {
   mobile_menu.value.style.right = "0";
@@ -9,6 +11,22 @@ function openNav() {
 
 function closeNav() {
   mobile_menu.value.style.right = "-80%";
+}
+
+function onSubmitSchedule() {
+  var isValid = true;
+  emailError.value = false;
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+    emailError.value = true;
+    isValid = false;
+  }
+  if (isValid) {
+    alert(email.value);
+  }
+}
+
+function scheduleClick() {
+  window.scrollTo(0, document.body.scrollHeight);
 }
 </script>
 
@@ -33,7 +51,9 @@ function closeNav() {
           <router-link to="/contact" class="nav-element"
             ><b>Contact</b></router-link
           >
-          <button class="btn-primary nav-button"><b>Schedule a Demo</b></button>
+          <button class="btn-primary nav-button" @click="scheduleClick()">
+            <b>Schedule a Demo</b>
+          </button>
         </div>
         <div class="mobile-nav">
           <img
@@ -49,20 +69,32 @@ function closeNav() {
     <div class="footer">
       <div class="section flex-container pt-5">
         <div class="mb-3">
-          <h2 class="center">Ready to start?</h2>
+          <h2 class="flex-md-center">Ready to start?</h2>
         </div>
-        <form>
-          <div class="input-wrapper mb-3">
-            <input
-              class="input"
-              placeholder="Enter email address"
-              type="email"
-            />
-            <button type="submit" class="btn-primary btn-demo">
-              Schedule a Demo
-            </button>
-          </div>
-        </form>
+        <div class="mb-3">
+          <form
+            @submit.prevent
+            @submit="onSubmitSchedule()"
+            novalidate
+            class="mt"
+          >
+            <div class="input-wrapper">
+              <input
+                :class="{ error: emailError }"
+                class="input"
+                v-model="email"
+                placeholder="Enter email address"
+                type="email"
+              />
+              <button type="submit" class="btn-primary btn-demo">
+                Schedule a Demo
+              </button>
+            </div>
+            <p v-if="emailError" class="form-error">
+              Please enter a valid e-mail address
+            </p>
+          </form>
+        </div>
       </div>
       <div class="flex-footer mt-3">
         <div class="overflow-wrapper">
@@ -140,7 +172,6 @@ function closeNav() {
 .flex-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 .flex-footer {

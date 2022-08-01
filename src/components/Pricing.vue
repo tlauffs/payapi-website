@@ -7,7 +7,7 @@
       <div class="circle top-sec-circle"></div>
     </div>
     <div class="section mt">
-      <h2 class="flex-md-center">Pricing</h2>
+      <h2 class="flex-md-center h2-big">Pricing</h2>
       <div class="pricing-grid">
         <div class="flex-md-center">
           <h3 class="mt">Free Plan</h3>

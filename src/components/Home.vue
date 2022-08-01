@@ -1,4 +1,20 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
+const email = ref("");
+const emailError = ref(false);
+
+function onSubmitSchedule() {
+  var isValid = true;
+  emailError.value = false;
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+    emailError.value = true;
+    isValid = false;
+  }
+  if (isValid) {
+    alert(email.value);
+  }
+}
 </script>
 <template>
   <div>
@@ -8,17 +24,27 @@
     <div class="grid-container section">
       <div class="grid-item header-text">
         <h1>Start building with our APIs for absolutely free.</h1>
-        <form>
-          <div class="input-wrapper demo-input">
+        <form
+          @submit.prevent
+          @submit="onSubmitSchedule()"
+          novalidate
+          class="mt"
+        >
+          <div class="input-wrapper">
             <input
+              :class="{ error: emailError }"
               class="input"
-              placeholder="Enter email address "
+              v-model="email"
+              placeholder="Enter email address"
               type="email"
             />
             <button type="submit" class="btn-primary btn-demo">
               Schedule a Demo
             </button>
           </div>
+          <p v-if="emailError" class="form-error">
+            Please enter a valid e-mail address
+          </p>
         </form>
         <p class="indent">
           Have any questions?
@@ -160,8 +186,7 @@
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  gap: 1rem;
 }
 .grid-item {
   width: 100%;
@@ -178,21 +203,6 @@
 }
 .demo-input {
   margin-top: 2rem;
-}
-.logo-grid {
-  --n: 3;
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(max(10rem, (100% - (var(--n) - 1) * 1rem) / var(--n)), 1fr)
-  );
-  gap: 1rem;
-  justify-items: center;
-  align-items: center;
-}
-
-.logo-grid-wrapper {
-  width: 100%;
 }
 .max-text-width {
   max-width: 28rem;
