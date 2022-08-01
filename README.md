@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./pay-website/src/assets/Screenshot.png)
+![Screenshot](./src/assets/Screenshot.png)
 
 ### Links
 
