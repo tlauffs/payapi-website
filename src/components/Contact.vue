@@ -252,7 +252,7 @@ textarea {
 
 .checkbox-check:checked {
   /*background-color: var(--pink);*/
-  background: url("../assets/shared/desktop/icon-check.svg") no-repeat;
+  background: url("../assets/shared/desktop/icon-check-white.svg") no-repeat;
   background-color: var(--pink);
   background-position: center;
   opacity: 1;
