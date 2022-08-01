@@ -30,7 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Git Repository: [Github](https://github.com/tlauffs/payapi-website)
+- Solution URL: [Frontendmentor Solution](https://www.frontendmentor.io/solutions/payapi-multipage-website-flpBx_UBIK)
 - Live Site URL: [Live Site](https://payapi-frontendmenter.netlify.app/)
 
 ## My process
