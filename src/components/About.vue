@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="mt-3">
     <div class="overflow-wrapper top-wrapper">
       <div class="circle top-sec-circle"></div>
     </div>
